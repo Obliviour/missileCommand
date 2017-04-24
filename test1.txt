@@ -1,0 +1,74 @@
+% This is a sample trace for the doubly linked list testbench included in the
+% prototype code for ECE 2035 Project 2 (Missile Command). This sample should
+% not be considered an exhaustive test suite! It is intended merely to serve as
+% a starting point to demonstrate how test cases can be constructed.
+
+% It is in your best interest to extend this sample trace to cover the edge cases
+% you uncover during development. By building a comprehensive test suite, you
+% can more confidently make changes to your code knowing that the tests will
+% report any mistake you may make along the way.
+
+% Build and verify a list using insertHead
+ih  1
+ih  2
+ih  3
+e   3 2 1         % Verify the list is as expected
+
+% Attempt to insert values when the current pointer isn't set
+r                 % Resets the list
+iaf 42            % Upon creation, the current pointer should be invalid
+ibf 42            % Thus, every relative insert operation should fail
+ih  1             % However, the absolute inserts will succeed
+it  5
+e   1 5           % Verify the list structure
+
+% Build up a list, and delete some items in the middle item
+r                 % Resets the list
+it  1             % Build up the list
+it  2
+it  3
+it  4
+it  5
+e   1 2 3 4 5     % Make sure the list is built up properly
+gh  1             % getHead sets the current pointer (expect value 1)
+gn  2             % Walk up the list...
+gn  3             % Current pointer is at 3
+df  4             % Delete the current node, and move forward (next value is 4)
+db  2             % Delete the current node, and move backward(prev value is 2)
+e   1 2 5
+
+
+%do everything
+
+r                 % Rest the list
+ih 1
+it 2
+ia 4
+ib 3
+c  3
+n  4
+p  3
+s  4
+e  1 2 3 4
+c  4
+db 3
+db 2
+db 1
+db 3              %Should Fail
+s 0
+
+r
+it 1
+it 2
+it 3
+it 4
+s 4
+h  1
+df 2
+df 3
+df 4
+df 123            %should fail
+s 0
+
+r
+

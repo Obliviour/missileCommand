@@ -1,0 +1,53 @@
+		MBED MISSILE COMMAND FEATURE CHECKLIST
+
+
+Student Name: Victor Barr 
+BASIC GAME FUNCTIONALITY
+
+YES   Aircraft movement
+
+YES   Firing at missiles
+
+YES   Detecting missile intercept and animating explosion
+
+YES   Detecting and animating city destruction
+
+YES   Detecting Game Over
+
+YES   Displaying score (number of missiles intercepted so far)
+
+YES   Advancing levels
+
+YES   Force level advance
+
+YES   Documentation
+
+EXTRA FEATURES
+
+YES   More complex explosion animation
+
+YES   Multiple lives
+
+YES   Change aircraft shape to something fancier
+
+NO    Add MIRVs
+
+YES   Add new hardware to do something interesting
+
+NO    Enable diagonal anti-missile trajectories
+
+NO    Smart/steerable anti-missile
+
+YES   Include a Game Menu for configuring the game
+
+YES   Keep track of game history and show in an interesting way
+
+YES   Add sound effects
+
+YES   Use pushbuttons to create a new feature (isInvinsible)
+
+YES   Use pushbuttons to create a new feature (Clear Screen)
+
+YES   Each Level uses different random colors for landscape, city, and plane
+
+____  Other: (please describe)
